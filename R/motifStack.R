@@ -47,7 +47,7 @@
 motifStack <-function(pfms, 
                       layout=c("stack", "treeview", "phylog", "radialPhylog"),
                       reorder=TRUE,
-                      clmethod=c("ward.D", "ward.D2", "single", "complete", "average", "mcquitty""median", "centroid"),
+                      clmethod=c("ward.D", "ward.D2", "single", "complete", "average", "mcquitty", "median", "centroid"),
                       ...){
     if(!is.list(pfms)){
       if(is(pfms, "pcm")) pfms <- pcm2pfm(pfms)
