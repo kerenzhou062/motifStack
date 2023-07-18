@@ -72,7 +72,7 @@ motifStack <-function(pfms,
                      FUN.VALUE = TRUE)
     alphab <- any(alphab)
     dots <- list(...)
-    dots$clmethod <- clmethod
+    dots$clmethod <- match.arg(clmethod)
     if("revcomp" %in% names(dots)){
       revcomp <- dots$revcomp
     }else{
