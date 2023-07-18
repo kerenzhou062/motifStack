@@ -72,6 +72,7 @@ motifStack <-function(pfms,
                      FUN.VALUE = TRUE)
     alphab <- any(alphab)
     dots <- list(...)
+    ## defined cluster methods for hclust
     dots$clmethod <- match.arg(clmethod)
     if("revcomp" %in% names(dots)){
       revcomp <- dots$revcomp
