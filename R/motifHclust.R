@@ -13,10 +13,11 @@
 #'   align <- matalign(pcms)
 #'   hc <- motifHclust(align, method="average")
 #'  }
-motifHclust <- function(align, ...){
+#' modified by KEREN, add "clmethod" argument to support selecting the cluster methods for "hclust"
+motifHclust <- function(align, clmethod, ...){
   d <- matalignOut2dist(align)
   d <- dist(d)
-  hc <- do.call("hclust", list(d=d, ...))
+  hc <- do.call("hclust", list(d=d, method=clmethod, ...))
   return(hc)
 }
 
