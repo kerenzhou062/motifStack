@@ -11,9 +11,11 @@
 #'   pcms <- importMatrix(file.path(fp, fs), format="pcm")
 #'   hc <- clusterMotifs(pcms)
 #'  }
+#' modified by KEREN, add "clmethod" argument to support selecting the cluster methods for "hclust"
 clusterMotifs <- function(motifs, ...){
+  dots <- list(...)
   d <- matalign(motifs, ...)
-  hc <- motifHclust(d, method="average")
+  hc <- motifHclust(d, dots$clmethod, method="average")
   hc
 }
 
