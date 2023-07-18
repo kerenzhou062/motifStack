@@ -15,7 +15,7 @@
 clusterMotifs <- function(motifs, ...){
   dots <- list(...)
   d <- matalign(motifs, ...)
-  hc <- motifHclust(d, dots$clmethod, method="average")
+  hc <- motifHclust(d, method=dots$clmethod)
   hc
 }
 
