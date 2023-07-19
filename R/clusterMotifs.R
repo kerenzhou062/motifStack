@@ -12,6 +12,7 @@
 #'   hc <- clusterMotifs(pcms)
 #'  }
 #' modified by KEREN, add "clmethod" argument to support selecting the cluster methods for "hclust"
+#
 clusterMotifs <- function(motifs, ...){
   dots <- list(...)
   d <- matalign(motifs, ...)
