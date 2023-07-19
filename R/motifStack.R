@@ -44,6 +44,7 @@
 #'   }
 #' 
 #' modified by KEREN, add "clmethod" argument to support selecting the cluster methods for "hclust"
+#
 motifStack <-function(pfms, 
                       layout=c("stack", "treeview", "phylog", "radialPhylog"),
                       reorder=TRUE,
